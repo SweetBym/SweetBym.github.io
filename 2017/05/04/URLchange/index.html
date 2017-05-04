@@ -108,17 +108,17 @@
 
 
 
-<meta name="description" content="date: 2017-05-04 16:40:30前端面试中常常会问到这个问题： 在浏览器地址栏中输入URL然后回车，直到页面显示，这个过程中发生了什么？一般主要会有下面几个过程：  1 浏览器首先根据URL进行DNS查询 首先从DNS缓存器中查询 若在缓存中未查询到，则向上一级请求DNS服务器，然后继续查询     2 取得IP地址，建立TCP连接  3 构造HTTP请求  添加一些HTTP首">
+<meta name="description" content="前端面试中常常会问到这个问题： 在浏览器地址栏中输入URL然后回车，直到页面显示，这个过程中发生了什么？一般主要会有下面几个过程：  1 浏览器首先根据URL进行DNS查询  首先从DNS缓存器中查询 若在缓存中未查询到，则向上一级请求DNS服务器，然后继续查询   2 取得IP地址，建立TCP连接  3 构造HTTP请求  添加一些HTTP首部 根据同源政策添加cookie   4 在TCP连接">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浏览器中输入URL到页面显示的过程">
 <meta property="og:url" content="http://sweetbym.github.io/2017/05/04/URLchange/index.html">
 <meta property="og:site_name" content="BYM's Blog">
-<meta property="og:description" content="date: 2017-05-04 16:40:30前端面试中常常会问到这个问题： 在浏览器地址栏中输入URL然后回车，直到页面显示，这个过程中发生了什么？一般主要会有下面几个过程：  1 浏览器首先根据URL进行DNS查询 首先从DNS缓存器中查询 若在缓存中未查询到，则向上一级请求DNS服务器，然后继续查询     2 取得IP地址，建立TCP连接  3 构造HTTP请求  添加一些HTTP首">
-<meta property="og:updated_time" content="2017-05-04T09:12:49.647Z">
+<meta property="og:description" content="前端面试中常常会问到这个问题： 在浏览器地址栏中输入URL然后回车，直到页面显示，这个过程中发生了什么？一般主要会有下面几个过程：  1 浏览器首先根据URL进行DNS查询  首先从DNS缓存器中查询 若在缓存中未查询到，则向上一级请求DNS服务器，然后继续查询   2 取得IP地址，建立TCP连接  3 构造HTTP请求  添加一些HTTP首部 根据同源政策添加cookie   4 在TCP连接">
+<meta property="og:updated_time" content="2017-05-04T09:16:01.629Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浏览器中输入URL到页面显示的过程">
-<meta name="twitter:description" content="date: 2017-05-04 16:40:30前端面试中常常会问到这个问题： 在浏览器地址栏中输入URL然后回车，直到页面显示，这个过程中发生了什么？一般主要会有下面几个过程：  1 浏览器首先根据URL进行DNS查询 首先从DNS缓存器中查询 若在缓存中未查询到，则向上一级请求DNS服务器，然后继续查询     2 取得IP地址，建立TCP连接  3 构造HTTP请求  添加一些HTTP首">
+<meta name="twitter:description" content="前端面试中常常会问到这个问题： 在浏览器地址栏中输入URL然后回车，直到页面显示，这个过程中发生了什么？一般主要会有下面几个过程：  1 浏览器首先根据URL进行DNS查询  首先从DNS缓存器中查询 若在缓存中未查询到，则向上一级请求DNS服务器，然后继续查询   2 取得IP地址，建立TCP连接  3 构造HTTP请求  添加一些HTTP首部 根据同源政策添加cookie   4 在TCP连接">
 
 
 
@@ -352,36 +352,26 @@
       
 
       
-        <hr>
-<h2 id="date-2017-05-04-16-40-30"><a href="#date-2017-05-04-16-40-30" class="headerlink" title="date: 2017-05-04 16:40:30"></a>date: 2017-05-04 16:40:30</h2><p>前端面试中常常会问到这个问题： 在浏览器地址栏中输入URL然后回车，<br>直到页面显示，这个过程中发生了什么？一般主要会有下面几个过程：</p>
+        <p>前端面试中常常会问到这个问题： 在浏览器地址栏中输入URL然后回车，<br>直到页面显示，这个过程中发生了什么？一般主要会有下面几个过程：</p>
+<p> 1 浏览器首先根据URL进行DNS查询</p>
 <ul>
-<li>1 浏览器首先根据URL进行DNS查询<ul>
 <li>首先从DNS缓存器中查询</li>
 <li>若在缓存中未查询到，则向上一级请求DNS服务器，然后继续查询</li>
 </ul>
-</li>
-</ul>
-<ul>
-<li><p>2 取得IP地址，建立TCP连接</p>
-</li>
-<li><p>3 构造HTTP请求</p>
+<p> 2 取得IP地址，建立TCP连接</p>
+<p> 3 构造HTTP请求</p>
 <ul>
 <li>添加一些HTTP首部</li>
 <li>根据同源政策添加cookie</li>
 </ul>
-</li>
-<li><p>4 在TCP连接上发送HTTP报文，等待响应</p>
-</li>
-<li><p>5 服务器处理HTTP请求报文，返回响应HTTP响应报文</p>
-</li>
-<li><p>6 浏览器处理服务器返回的HTTP响应报文，若为HTML则渲染页面，<br>  不包括脚本的简单渲染如下：</p>
+<p> 4 在TCP连接上发送HTTP报文，等待响应</p>
+<p> 5 服务器处理HTTP请求报文，返回响应HTTP响应报文</p>
+<p> 6 浏览器处理服务器返回的HTTP响应报文，若为HTML则渲染页面，<br>    不包括脚本的简单渲染如下：</p>
 <ul>
 <li>解析DOM CSSOM</li>
 <li>根据DOM、 CSSOM计算render tree</li>
 <li>根据render tree 进行layout</li>
 <li>paint，至此，用户可以看到页面了</li>
-</ul>
-</li>
 </ul>
 
       
@@ -496,17 +486,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/dog.jpg"
@@ -597,22 +578,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#date-2017-05-04-16-40-30"><span class="nav-number">1.</span> <span class="nav-text">date: 2017-05-04 16:40:30</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
